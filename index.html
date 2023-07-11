@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit-Developler portfolio</title>
+    <link rel="stylesheet" href="Style10.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="head">
+        <nav>
+            <div class="left">Ankit Dwivedi Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/">About me</a></li>
+                    <li> <a href="project.html" target="_blank">Projects</a></li>
+                    <li><a href="/">Contact me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="sect1">
+        <div class="leftsect">
+            <div>Hey, I am <span class="blue">Ankit Dhar Dwivedi</span><br>I am <span id="element"></span></div>
+            <div>
+                <button class="btn1"><a href="imgport/CV_202307101046034.pdf" Download resume="test_image">Download
+                        resume</button>
+                <button class="btn2"><a href="https://github.com/AnkitdharDwivedi/AnkitdharDwivedi.git"
+                        target="_blank">Visit Github</a></button>
+            </div>
+        </div>
+        <div class="rightsect">
+            <img src="imgport/first.jpg" alt="">
+        </div>
+
+    </section>
+    <!----------------------------about me------------------------------------>
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1"> <img src="imgport/Snapchat-1788091562.jpg" alt=""></div>
+                <div class="about-col2">
+                    <h1 class="sub-tittle">About me</h1>
+                    <p>Hello! I am Ankit Dhar Dwivedi, an aspiring Btech Computer Science Student thrilled to
+                        present my
+                        portfolio. As a recent btech student and a passionate learner, I am eager to showcase my skills,
+                        potential, and enthusiasm for Web development. This portfolio serves as a platform to
+                        demonstrate
+                        my capabilities and highlight my commitment to personal and professional growth.</p>
+                    <div class="tab-tittles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('achievment')">Achievemnts&Awards</p>
+                    </div>
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>Data Structures and Alogrithm</span></li>
+                            <li><span>Web Development</span></li>
+                            <li><span>C Language</span></li>
+                            <li><span>Java Language</span></li>
+                            <li><span> Familiar :Python</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>G.L.Bajaj Institute of Technology<br>& Management<br></span>Btech(Computer Science
+                                and Enginnering)</li>
+                            <li><span>G.S.V.S.B.V Sarojini Nagar</span><br>Intermediate<br>91%</li>
+                            <li><span>G.B.S.S.School no.3 Sarojini Nagar</span><br>HighSchool</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="achievment">
+                        <ul>
+                            <li><span>GFG solved</span><br>200</li>
+                            <li><span>Leetcode solved</span><br>100</li>
+                            <li><span>HackerRank solved</span><br>50</li>
+                            <li><span>Codechef solved</span><br> 150</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------------------------services--------------------------------------->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: [' Web Developer', ' Coder'],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true
+        });
+    </script>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-content");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+
+
+</body>
+
+</html>
